@@ -6,6 +6,11 @@ export const SavedVideosContainer = styled.div`
   overflow-y: auto;
   margin-left: 160px;
   margin-top: 60px;
+
+  @media screen and (max-width: 576px) {
+    margin-left: 0px;
+    margin-top: 60px;
+  }
 `
 export const SavedVideoHeaderContainer = styled.div`
   display: flex;
@@ -36,6 +41,9 @@ export const SavedOrderList = styled.ul`
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
+
+  @media screen and (max-width: 576px) {
+  }
 `
 
 export const NoVideosContainer = styled.div`

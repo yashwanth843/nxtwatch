@@ -1,6 +1,7 @@
 import {withRouter, Link} from 'react-router-dom'
 import Popup from 'reactjs-popup'
 import {BsMoon, BsBrightnessHigh} from 'react-icons/bs'
+import {IoReorderThree, IoClose} from 'react-icons/io5'
 import Cookies from 'js-cookie'
 import VideoContext from '../../Context/VideoContext'
 
@@ -16,12 +17,13 @@ import {
   MessageText,
   CancelButton,
   ConfirmButton,
+  MobileButton,
 } from './styledComponent'
 
 const Header = props => (
   <VideoContext.Consumer>
     {value => {
-      const {isTheme, toggleTheme} = value
+      const {isTheme, toggleTheme, mobileFun, mobile} = value
 
       const onClickTheme = () => {
         toggleTheme()
@@ -33,6 +35,15 @@ const Header = props => (
         history.replace('/login')
       }
 
+      const onClickMobile = () => {
+        mobileFun()
+      }
+
+      const lineLogo = mobile ? (
+        <IoClose size="25" />
+      ) : (
+        <IoReorderThree size="25" />
+      )
       const navBgColor = isTheme ? '#181818' : '#f9f9f9'
       const logoImg = isTheme
         ? 'https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-dark-theme-img.png'
@@ -52,6 +63,13 @@ const Header = props => (
             >
               {isTheme ? <BsBrightnessHigh size="25" /> : <BsMoon size="25" />}
             </ThemeLogoButton>
+            <MobileButton
+              type="button"
+              onClick={onClickMobile}
+              color={isTheme ? '#ffffff' : '#000000'}
+            >
+              {lineLogo}
+            </MobileButton>
             <ProfileButton>
               <ProfileLogo
                 src="https://assets.ccbp.in/frontend/react-js/nxt-watch-profile-img.png"

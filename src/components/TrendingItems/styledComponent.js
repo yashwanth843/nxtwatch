@@ -7,11 +7,20 @@ export const TrendingItemList = styled.li`
   display: flex;
   margin-bottom: 10px;
   margin-left: 20px;
+
+  @media screen and (max-width: 576px) {
+    flex-direction: colums;
+  }
 `
 
 export const TrendingImage = styled.img`
   width: 400px;
   height: 280px;
+
+  @media screen and (max-width: 576px) {
+    width: 300px;
+    height: 200px;
+  }
 `
 
 export const TrendingTextContainer = styled.div`

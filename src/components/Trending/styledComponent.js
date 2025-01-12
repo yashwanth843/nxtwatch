@@ -6,6 +6,11 @@ export const TrendingContainer = styled.div`
   overflow-y: auto;
   margin-left: 160px;
   margin-top: 60px;
+
+  @media screen and (max-width: 576px) {
+    margin-left: 0px;
+    margin-top: 60px;
+  }
 `
 export const TrendingheadingContainer = styled.div`
   display: flex;
@@ -32,7 +37,16 @@ export const LogoContainer = styled.div`
 `
 
 export const TrendingApiContainer = styled.div``
-export const TrendingUnorderList = styled.ul``
+export const TrendingUnorderList = styled.ul`
+  @media screen and (max-width: 576px) {
+    width: 300px;
+    height: 280px;
+
+    @media screen and (max-width: 576px) {
+      flex-direction: colums;
+    }
+  }
+`
 export const Loading1 = styled.div`
   display: flex;
   justify-content: center;

@@ -4,6 +4,10 @@ export const VideoList = styled.li`
   list-style: none;
   display: flex;
   margin-bottom: 15px;
+
+  @media screen and (max-width: 576px) {
+    flex-direction: column;
+  }
 `
 
 export const VideoImage = styled.img`

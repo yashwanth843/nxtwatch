@@ -78,7 +78,7 @@ const VideoPlayer = props => {
           <>
             <VideoList>
               <VideoPlayerContainer>
-                <ReactPlayer url={videoUrl} width="640px" controls="true" />
+                <ReactPlayer url={videoUrl} width="600px" controls="true" />
                 <VideoTextContainer>
                   <Heading color={textColor}>{title}</Heading>
                   <ViewContainer>

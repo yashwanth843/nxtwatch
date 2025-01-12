@@ -12,6 +12,11 @@ export const VideoImage = styled.img`
   width: 280px;
   height: 180px;
   margin-bottom: 0;
+
+  @media screen and (max-width: 576px) {
+    width: 300px;
+    height: 200px;
+  }
 `
 export const Channel = styled.p`
   margin-top: 0;

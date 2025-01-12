@@ -6,6 +6,11 @@ export const GamingContainer = styled.div`
   overflow-y: auto;
   margin-left: 160px;
   margin-top: 60px;
+
+  @media screen and (max-width: 576px) {
+    margin-left: 0px;
+    margin-top: 60px;
+  }
 `
 
 export const GamingHeaderContainer = styled.div`
@@ -36,6 +41,10 @@ export const GameUnOrderList = styled.ul`
   display: grid;
   grid-template-columns: repeat(4, 0fr);
   margin-left: 30px;
+
+  @media screen and (max-width: 576px) {
+    grid-template-columns: repeat(1, 0fr);
+  }
 `
 
 export const Loading2 = styled.div`

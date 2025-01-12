@@ -11,6 +11,10 @@ export const SideBarContainer = styled.div`
   background-color: ${props => props.bgColor};
   position: fixed;
   top: 70px;
+
+  @media screen and (max-width: 576px) {
+    display: none;
+  }
 `
 export const UnorderList = styled.ul`
   display: flex;
@@ -28,48 +32,31 @@ export const List = styled.li`
   margin-right: 40px;
   padding-left: 20px;
 `
-export const HomeButton = styled.button`
-  background-color: transparent;
-  border: none;
-  color: ${props => props.color};
-  font-family: 'Roboto';
-  cursor: pointer;
-  font-weight: bold;
-`
-export const TrendingButton = styled.button`
-  background-color: transparent;
-  border: none;
-  color: ${props => props.color};
-  font-family: 'Roboto';
-  cursor: pointer;
-`
-export const GamingButton = styled.button`
-  background-color: transparent;
-  border: none;
-  color: ${props => props.color};
-  font-family: 'Roboto';
-  cursor: pointer;
-`
-export const SavedButton = styled.button`
-  background-color: transparent;
-  border: none;
-  color: ${props => props.color};
-  font-family: 'Roboto';
-  cursor: pointer;
-`
 export const Contact = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+
+  @media screen and (max-width: 576px) {
+    display: none;
+  }
 `
 export const ContactText = styled.p`
   color: ${props => props.color};
   font-family: 'Roboto';
   margin-left: 10px;
   font-size: 18px;
+
+  @media screen and (max-width: 576px) {
+    display: none;
+  }
 `
-export const ImageLogoContainer = styled.div``
+export const ImageLogoContainer = styled.div`
+  @media screen and (max-width: 576px) {
+    display: none;
+  }
+`
 export const Facebook = styled.img`
   width: 25px;
   height: 25px;
@@ -96,4 +83,12 @@ export const Desc = styled.p`
 `
 export const NavLinks = styled(Link)`
   text-decoration: none;
+`
+export const MobileContainer = styled.div`
+  background-color: ${props => props.bgColor};
+  position: fixed;
+  top: 70;
+`
+export const Para = styled.p`
+  color: ${props => props.color};
 `

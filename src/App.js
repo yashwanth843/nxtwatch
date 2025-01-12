@@ -16,12 +16,17 @@ import './App.css'
 class App extends Component {
   state = {
     isTheme: false,
+    mobile: false,
     activeTab: 'Home',
     savedVideos: [],
   }
 
   changeTab = tab => {
     this.setState({activeTab: tab})
+  }
+
+  mobileFun = () => {
+    this.setState(prevState => ({mobile: !prevState.mobile}))
   }
 
   toggleTheme = () => {
@@ -53,13 +58,15 @@ class App extends Component {
   // }
 
   render() {
-    const {isTheme, activeTab, isSave, savedVideos} = this.state
+    const {isTheme, activeTab, isSave, savedVideos, mobile} = this.state
     return (
       <VideoContext.Provider
         value={{
           isTheme,
           activeTab,
           isSave,
+          mobile,
+          mobileFun: this.mobileFun,
           savedVideos,
           changeTab: this.changeTab,
           toggleTheme: this.toggleTheme,

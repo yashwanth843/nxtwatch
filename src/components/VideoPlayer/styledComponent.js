@@ -7,10 +7,19 @@ export const VideoPlayerContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-right: 50px;
+
+  @media screen and (max-width: 576px) {
+    margin-left: 100px;
+    margin-right: 0;
+  }
 `
 export const VideoTextContainer = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media screen and (max-width: 576px) {
+    margin-left: 50px;
+  }
 `
 export const Heading = styled.p`
   color: ${props => props.color};
@@ -89,6 +98,10 @@ export const Hr = styled.hr`
 export const Description = styled.p`
   width: 600px;
   color: ${props => props.color};
+
+  @media screen and (max-width: 576px) {
+    width: 500px;
+  }
 `
 export const Published = styled.p`
   color: #7e858e;

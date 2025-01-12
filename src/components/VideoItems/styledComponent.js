@@ -9,6 +9,11 @@ export const VideoItemsMainContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 576px) {
+    margin-left: 0px;
+    margin-top: 60px;
+  }
 `
 export const VideoUnOrder = styled.ul`
   border: 1px solid black

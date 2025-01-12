@@ -45,7 +45,7 @@ const apiStatusContaint = {
 class Home extends Component {
   state = {
     apiStatus: apiStatusContaint.initial,
-    display: 'flex',
+    display: true,
     apiData: [],
     searchInput: '',
     videoCount: 0,
@@ -89,7 +89,7 @@ class Home extends Component {
   }
 
   onClickClose = () => {
-    this.setState({display: 'none'})
+    this.setState({display: false})
   }
 
   onChangeSearchInput = event => {
@@ -183,25 +183,28 @@ class Home extends Component {
               <Header />
               <SideNavBar />
               <HomeContainer data-testid="home" bgColor={homeTheme}>
-                <MembershipContainer display={display} data-testid="banner">
-                  <MembershipText>
-                    <NxtWatch
-                      src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"
-                      alt="nxt watch logo"
-                    />
-                    <NxtWatchText>
-                      Buy Nxt Watch Premium prepaid plans with UPI
-                    </NxtWatchText>
-                    <NxtButton>GET IT NOW</NxtButton>
-                  </MembershipText>
-                  <CloseButton
-                    type="button"
-                    onClick={this.onClickClose}
-                    data-testid="close"
-                  >
-                    <MdClose size="25" />
-                  </CloseButton>
-                </MembershipContainer>
+                {display && (
+                  <MembershipContainer data-testid="banner">
+                    <MembershipText>
+                      <NxtWatch
+                        src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"
+                        alt="nxt watch logo"
+                      />
+                      <NxtWatchText>
+                        Buy Nxt Watch Premium prepaid plans with UPI
+                      </NxtWatchText>
+                      <NxtButton>GET IT NOW</NxtButton>
+                    </MembershipText>
+                    <CloseButton
+                      type="button"
+                      onClick={this.onClickClose}
+                      data-testid="close"
+                    >
+                      <MdClose size="25" />
+                    </CloseButton>
+                  </MembershipContainer>
+                )}
+
                 <SearchInputContainer>
                   <SearchInput
                     type="search"

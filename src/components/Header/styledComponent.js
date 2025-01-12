@@ -32,6 +32,10 @@ export const ProfileButton = styled.button`
   background-color: transparent;
   border: none;
   cursor: pointer;
+
+  @media screen and (max-width: 576px) {
+    display: none;
+  }
 `
 export const ProfileLogo = styled.img`
   width: 30px;
@@ -80,3 +84,14 @@ export const ConfirmButton = styled.button`
   font-family: 'Roboto';
   cursor: pointer;
 `
+export const MobileButton = styled.button`
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  color: ${props => props.color};
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+`
+export const MobileLogout = styled.button``
